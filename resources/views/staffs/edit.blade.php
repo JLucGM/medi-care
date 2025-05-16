@@ -14,7 +14,7 @@
             @include('layouts.errors')
         </div>
         <div class="card">
-            <div class="card-body">
+            <div class="card-body">                
                 {{ Form::open(['route' => ['staffs.update', $staff->id], 'method' => 'put','files' => 'true','id' => 'editStaffForm']) }}
                 {{ Form::hidden('is_edit', true,['id' => 'staffIsEdit']) }}
                     @include('staffs.fields')

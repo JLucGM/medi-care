@@ -1,8 +1,8 @@
 /node_modules
-/public/hot
-/public/storage
-/public/css
-/public/js
+# /public/hot
+# /public/storage
+# /public/css
+# /public/js
 /storage/*.key
 /vendor
 .env
@@ -16,10 +16,10 @@ yarn-error.log
 /.idea
 /.vscode
 .idea
-/public/assets
-/public/uploads
-/public/js/app.js
-/public/mix-manifest.json
+# /public/assets
+# /public/uploads
+# /public/js/app.js
+# /public/mix-manifest.json
 /DEVSENSE/packages-cache/authorizenet
 # Ignorar archivos de secretos de Google
 storage/client_secret_*.json

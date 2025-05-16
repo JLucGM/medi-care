@@ -14,3 +14,7 @@
         </div>
     </div>
 @endsection
+
+<!-- Admin can add / delete patient visits records from here. 
+ Patient visits are the records who will be entered by the doctors to track 
+ patients visits and the other information about their patients. -->

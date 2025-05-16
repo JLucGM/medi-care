@@ -1,4 +1,4 @@
-<?php
+Aquí está el texto traducido al español:<?php
 
 return [
 
@@ -14,7 +14,7 @@ return [
     */
 
     'failed' => 'Estas credenciales no coinciden con nuestros registros.',
-    'throttle' => 'Demasiados intentos de inicio de sesión. Vuelva a intentarlo en: segundos segundos. ',
+    'throttle' => 'Demasiados intentos de inicio de sesión. Vuelva a intentarlo en :seconds segundos.',
     'full_name' => 'Nombre completo',
     'email' => 'Correo electrónico',
     'password' => 'Contraseña',
@@ -25,7 +25,7 @@ return [
     'register' => 'Registrarse',
 
     'login' => [
-        'title' => 'Inicie sesión para iniciar su sesión',
+        'title' => 'Inicie sesión para comenzar su sesión',
         'forgot_password' => 'Olvidé mi contraseña',
         'register_membership' => 'Registrar una nueva membresía',
     ],

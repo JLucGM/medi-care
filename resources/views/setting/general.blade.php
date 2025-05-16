@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('title')
-    {{__('messages.settings')}}
+{{__('messages.settings')}}
 @endsection
 @section('content')
-    <div class="container-fluid">
-        {{ Form::open(['route' => 'setting.update', 'files' => true,'id' => 'generalSettingForm']) }}
-        <div class="d-flex flex-column">
-            @include('setting.setting_menu')
-            {{ Form::hidden('sectionName', $sectionName) }}
-            {{ Form::hidden('setting_country_id', false,['id' => 'settingCountryId']) }}
-            {{ Form::hidden('setting_state_id', false,['id' => 'settingStateId']) }}
-            {{ Form::hidden('setting_city_id', false,['id' => 'settingCityId']) }}
+<div class="container-fluid">
+    {{ Form::open(['route' => 'setting.update', 'files' => true,'id' => 'generalSettingForm']) }}
+    <div class="d-flex flex-column">
+        @include('setting.setting_menu')
+        {{ Form::hidden('sectionName', $sectionName) }}
+        {{ Form::hidden('setting_country_id', false,['id' => 'settingCountryId']) }}
+        {{ Form::hidden('setting_state_id', false,['id' => 'settingStateId']) }}
+        {{ Form::hidden('setting_city_id', false,['id' => 'settingCityId']) }}
         <div class="card">
             <div class="card-header">
                 <div class="d-flex align-items-center justify-content-center">
@@ -58,20 +58,20 @@
                     </div>
                 </div>
                 <div class="row mb-6">
-                        <label for="appLogoPreview" class="col-lg-4 required form-label">{{ __('messages.setting.logo').':'}}</label>
+                    <label for="appLogoPreview" class="col-lg-4 required form-label">{{ __('messages.setting.logo').':'}}</label>
                     <div class="col-lg-8">
                         <div class="mb-3" io-image-input="true">
                             <div class="d-block">
                                 <div class="image-picker">
                                     <div class="image previewImage" id="appLogoPreview"
-                                         style="background-image: url('{{($setting['logo'])?asset($setting['logo']):asset('assets/image/infyCare-favicon.ico')}}')">
+                                        style="background-image: url('{{($setting['logo'])?asset($setting['logo']):asset('assets/image/infyCare-favicon.ico')}}')">
                                     </div>
                                     <span class="picker-edit rounded-circle text-gray-500 fs-small"
-                                          data-bs-toggle="tooltip"
-                                          data-placement="top" data-bs-original-title="{{ __('messages.setting.change_app_logo') }}">
+                                        data-bs-toggle="tooltip"
+                                        data-placement="top" data-bs-original-title="{{ __('messages.setting.change_app_logo') }}">
                                         <label>
                                             <i class="fa-solid fa-pen" id="profileImageIcon"></i>
-                                            <input type="file" id="logo" name="logo" class="image-upload d-none" accept="image/*"/>
+                                            <input type="file" id="logo" name="logo" class="image-upload d-none" accept="image/*" />
                                         </label>
                                     </span>
                                 </div>
@@ -81,33 +81,35 @@
                 </div>
                 <div class="row mb-6">
                     <label for="faviconPreview"
-                           class="col-lg-4 required form-label"> {{__('messages.setting.favicon'). ':'}}</label>
+                        class="col-lg-4 required form-label"> {{__('messages.setting.favicon'). ':'}} <br>size de 30x30</label>
+                        
                     <div class="col-lg-8">
                         <div class="mb-3" io-image-input="true">
                             <div class="d-block">
                                 <div class="image-picker">
                                     <div class="image previewImage" id="faviconPreview"
-                                         style="background-image: url('{{($setting['favicon'])?asset($setting['favicon']):asset('assets/image/infyom-logo.png')}}');">
+                                        style="background-image: url('{{($setting['favicon'])?asset($setting['favicon']):asset('assets/image/infyom-logo.png')}}');">
                                     </div>
                                     <span class="picker-edit rounded-circle text-gray-500 fs-small" data-bs-toggle="tooltip"
-                                          data-placement="top" data-bs-original-title="{{ __('messages.setting.change_favicon') }}">
-                    <label>
-                        <i class="fa-solid fa-pen" id="profileImageIcon"></i>
-                        <input type="file" id="favicon" name="favicon" class="image-upload d-none" accept="image/*"/>
-                    </label>
-                </span>
+                                        data-placement="top" data-bs-original-title="{{ __('messages.setting.change_favicon') }}">
+                                        <label>
+                                            <i class="fa-solid fa-pen" id="profileImageIcon"></i>
+                                            <input type="file" id="favicon" name="favicon" class="image-upload d-none" accept="image/*" />
+                                        </label>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="row mb-6">
                     <label class="col-lg-4 form-label required">
                         <span>{{__('messages.setting.do_not_allow_to_login_without_email_verification')}}:</span>
                         <span data-bs-toggle="tooltip"
-                              data-placement="top"
-                              data-bs-original-title="{{ __('messages.setting.when_checkbox_disable') }}">
-                                <i class="fas fa-question-circle ml-1 mt-1 general-question-mark"></i>
+                            data-placement="top"
+                            data-bs-original-title="{{ __('messages.setting.when_checkbox_disable') }}">
+                            <i class="fas fa-question-circle ml-1 mt-1 general-question-mark"></i>
                         </span>
                     </label>
                     <div class="col-lg-8">
@@ -141,8 +143,8 @@
                         <label class="col-lg-4 form-label">
                             <span>{{__('messages.common.default_language')}}:</span>
                             <span data-bs-toggle="tooltip"
-                              data-placement="top"
-                              data-bs-original-title="{{ __('messages.setting.default_language_suggest') }}">
+                                data-placement="top"
+                                data-bs-original-title="{{ __('messages.setting.default_language_suggest') }}">
                                 <i class="fas fa-question-circle ml-1 mt-1 general-question-mark"></i>
                             </span>
 
@@ -168,20 +170,20 @@
                         <div class="table-responsive px-0">
                             <table>
                                 <tbody class="d-flex flex-wrap">
-                                @foreach($paymentGateways as $key => $paymentGateway)
+                                    @foreach($paymentGateways as $key => $paymentGateway)
                                     <tr class="w-100 d-flex justify-content-between">
                                         <td class="p-2">
                                             <div class="form-check form-check-custom">
                                                 <input class="form-check-input" type="checkbox" value="{{$key}}"
-                                                       name="payment_gateway[]"
-                                                       id="{{$key}}" {{in_array($paymentGateway, $selectedPaymentGateways) ?'checked':''}} />
+                                                    name="payment_gateway[]"
+                                                    id="{{$key}}" {{in_array($paymentGateway, $selectedPaymentGateways) ?'checked':''}} />
                                                 <label class="form-label" for="{{$key}}">
                                                     {{$paymentGateway}}
                                                 </label>
                                             </div>
                                         </td>
                                     </tr>
-                                @endforeach
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -197,5 +199,5 @@
         </div>
         {{ Form::close() }}
     </div>
-    </div>
+</div>
 @endsection
